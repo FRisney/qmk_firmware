@@ -19,29 +19,47 @@
 
 // Shortcut to make keymap more readable
 #define RINDEX1 KC_SLSH
-#define RINDEX2 TG(_NAVI)
+#define RINDEX2 TG(_WKMN)
 
-#define RTHUMB1 KC_BSPC
-#define RTHUMB1 KC_BSPC
+#define RTHUMB10 KC_BSPC
+#define RTHUMB11 KC_BSPC
+#define RTHUMB12 KC_BSPC
+#define RTHUMB13 KC_BSPC
 
-#define RTHUMB20 TG(_SYMB)
-#define RTHUMB21 TG(_NAVI)
-#define RTHUMB22 TG(_ADJU)
-#define RTHUMB23 TO(_BASE)
+#define RTHUMB20 KC_LSIFT
+#define RTHUMB20 OSM(MOD_RGUI)
 
-#define RTHUMB3 OSM(MOD_RGUI)
+#define RTHUMB30 TG(_SYMB)
+#define RTHUMB31 TG(_NAVI)
+#define RTHUMB32 TG(_ADJU)
+#define RTHUMB33 TO(_BASE)
+
+#define RHOME1 MT(MOD_RCTL, KC_J)
+#define RHOME2 MT(MOD_LALT, KC_K)
+#define RHOME3 MT(MOD_RGUI, KC_L)
 
 
 #define LINDEX1 KC_BSLS
 #define LINDEX2 TG(_NAVI)
 
-#define LTHUMB10 OSL(_SYMB)
+#define LTHUMB10 KC_ENTER
 #define LTHUMB11 KC_ENTER
+#define LTHUMB12 KC_ENTER
+#define LTHUMB13 KC_ENTER
 
 #define LTHUMB20 KC_SPC
-#define LTHUMB21 TO(_BASE)
+#define LTHUMB21 KC_SPC
+#define LTHUMB22 KC_SPC
+#define LTHUMB23 KC_SPC
 
-#define LTHUMB3 OSM(MOD_LCTL)
+#define LTHUMB30 MO(_SYMB)
+#define LTHUMB31 MO(_NAVI)
+#define LTHUMB32 MO(_ADJU)
+#define LTHUMB33 MO(_BASE)
+
+#define LHOME1 MT(MOD_RCTL, KC_F)
+#define LHOME2 MT(MOD_LALT, KC_D)
+#define LHOME3 MT(MOD_RGUI, KC_S)
 
 #define SSHIFT OSM(MOD_LSFT)
 
@@ -53,11 +71,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_TAB  ,KC_Q    ,KC_W    ,KC_E    ,KC_R    ,KC_T    ,LINDEX2 ,                          RINDEX2 ,KC_Y    ,KC_U    ,KC_I    ,KC_O    ,KC_P    ,KC_EQL  ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┤────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_ESC  ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,LINDEX1 ,                          RINDEX1 ,KC_H    ,KC_J    ,KC_K    ,KC_L    ,KC_SCLN ,KC_QUOT ,
+     KC_ESC  ,KC_A    ,HOMEL3  ,HOMEL2  ,HOMEL1  ,KC_G    ,LINDEX1 ,                          RINDEX1 ,KC_H    ,RHOME1  ,RHOME2  ,RHOME3  ,KC_SCLN ,KC_QUOT ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┤────────┼────────┼────────┼────────┼────────┼────────┤
      SSHIFT  ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_PGUP ,KC_PGDN ,        KC_LALT ,KC_RCTL ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_RALT ,SSHIFT  ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     KC_LGUI ,KC_PPLS ,KC_MINS ,KC_LALT ,     LTHUMB3 ,    LTHUMB20,LTHUMB10,        RTHUMB1 ,RTHUMB20,    RTHUMB3 ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
+     KC_LGUI ,KC_PPLS ,KC_MINS ,KC_LALT ,     LTHUMB30,    LTHUMB20,LTHUMB10,        RTHUMB10,RTHUMB20,    RTHUMB30,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
@@ -71,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______ ,KC_PERC ,KC_CIRC ,KC_LPRN ,KC_RPRN ,KC_TILD ,_______ ,_______ ,        _______ ,_______ ,KC_AMPR ,KC_1    ,KC_2    ,KC_3    ,KC_PENT ,_______ ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     _______ ,_______ ,_______ ,_______ ,     KC_LCTL ,    LTHUMB21,LTHUMB11,        KC_BSPC ,RTHUMB21,    KC_RGUI ,     KC_0    ,KC_PDOT ,KC_PENT ,XXXXXXX
+     _______ ,_______ ,_______ ,_______ ,     LTHUMB31,    LTHUMB21,LTHUMB11,        RTHUMB11,RTHUMB21,    RTHUMB31 ,     KC_0    ,KC_PDOT ,KC_PENT ,XXXXXXX
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
@@ -85,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______ ,KC_BTN1 ,KC_BTN3 ,KC_BTN2 ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,        _______ ,_______ ,XXXXXXX ,KC_HOME ,KC_PGDN ,KC_PGUP ,KC_END  ,_______ ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     _______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     _______ ,    LTHUMB21,_______ ,        _______ ,RTHUMB22,    _______ ,     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX
+     _______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     LTHUMB32,    LTHUMB22,LTHUMB12,        RTHUMB12,RTHUMB22,    RTHUMB32,     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
@@ -99,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______ ,KC_INS  ,XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_PSCR ,_______ ,_______ ,        _______ ,_______ ,XXXXXXX ,KC_NUM  ,KC_CAPS ,XXXXXXX ,XXXXXXX ,_______ ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     _______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     _______ ,    LTHUMB21,_______ ,        _______ ,RTHUMB23,    _______ ,     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX
+     _______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     LTHUMB33,    LTHUMB23,LTHUMB13,        RTHUMB13,RTHUMB23,    RTHUMB33,     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
    [_WKMN] = LAYOUT(
