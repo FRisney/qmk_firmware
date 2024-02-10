@@ -35,7 +35,7 @@
 #define LINDEX1 KC_BSLS
 #define LINDEX2 TG(_NAVI)
 
-#define LTHUMB10 OSL(_SYMB)
+#define LTHUMB10 LT(_SYMB, KC_ENTER)
 #define LTHUMB11 KC_ENTER
 
 #define LTHUMB20 KC_SPC
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┤────────┼────────┼────────┼────────┼────────┼────────┤
      KC_ESC  ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,LINDEX1 ,                          RINDEX1 ,KC_H    ,KC_J    ,KC_K    ,KC_L    ,KC_SCLN ,KC_QUOT ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┤────────┼────────┼────────┼────────┼────────┼────────┤
-     SSHIFT  ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_PGUP ,KC_PGDN ,        KC_LALT ,KC_RCTL ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_RALT ,SSHIFT  ,
+     KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_PGUP ,KC_PGDN ,        KC_LALT ,KC_RCTL ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_RALT ,SSHIFT  ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
      KC_LGUI ,KC_PPLS ,KC_MINS ,KC_LALT ,     LTHUMB3 ,    LTHUMB20,LTHUMB10,        RTHUMB1 ,RTHUMB20,    RTHUMB3 ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                                           ┌────────┬────────┬────────┬────────┬────────┬────────┐
      _______ ,KC_F1   ,KC_F2   ,KC_F3   ,KC_F4   ,KC_F5   ,                                            KC_F6   ,KC_F7   ,KC_F8   ,KC_F9   ,KC_F10  ,KC_F11  ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______ ,KC_EXLM ,KC_AT   ,KC_LCBR ,KC_RCBR ,KC_PIPE ,_______ ,                          _______ ,KC_PSLS ,KC_7    ,KC_8    ,KC_9    ,KC_PMNS ,KC_F12  ,
+     _______ ,KC_EXLM ,KC_AT   ,KC_LCBR ,KC_RCBR ,KC_PIPE ,_______ ,                          KC_DEL  ,KC_PSLS ,KC_7    ,KC_8    ,KC_9    ,KC_PMNS ,KC_F12  ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______ ,KC_HASH ,KC_DLR  ,KC_LBRC ,KC_RBRC ,KC_GRV  ,_______ ,                          _______ ,KC_PAST ,KC_4    ,KC_5    ,KC_6    ,KC_PPLS ,XXXXXXX ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
